@@ -1,0 +1,30 @@
+create database `healthcare`;
+ use `healthcare`;
+ create table patients(id_patient int auto_increment primary key,
+ username varchar(12) not null,password varchar(12) not null,
+ email varchar(50) not null unique, image varchar(255) );
+ SELECT * FROM patients ;
+
+ create table doctors(id_doctor int auto_increment primary key,
+ username varchar(12) not null,password varchar(12) not null,
+ email varchar(50) unique not null, image varchar(255) , 
+ specialization varchar(20)not null,
+ appoinments varchar(50) not null, price int not null,
+ specialization_image varchar(255));
+ SELECT * FROM doctors ;
+ 
+ create table labs(id_lab int auto_increment primary key,
+ username varchar(12) not null,password varchar(12) not null,
+ email varchar(50) unique not null, image varchar(255) , 
+ address varchar(50) not null, license varchar(30));
+ 
+ SELECT * FROM labs ;
+ 
+ create table pharmacies(id_pharmacy int auto_increment primary key,
+ username varchar(12) not null,password varchar(12) not null,
+ email varchar(50) unique not null, image varchar(255) , 
+ address varchar(50) not null, license varchar(30));
+ 
+ SELECT * FROM pharmacies ;
+ 
+ 
